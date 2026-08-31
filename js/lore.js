@@ -84,7 +84,7 @@ const lore = {
     unlockTesting() {
         if (localSettings.loreCount < 1) localSettings.loreCount = 1
         if (localSettings.isAllowed) localStorage.setItem("localSettings", JSON.stringify(localSettings)); //update local storage
-        document.getElementById("control-testing").style.visibility = (localSettings.loreCount === 0) ? "hidden" : "visible"
+        document.getElementById("control-testing").style.visibility = "visible";
         // document.getElementById("experiment-button").style.visibility = (localSettings.loreCount === 0) ? "hidden" : "visible"
         simulation.inGameConsole(`<span class='color-var'>lore</span>.unlockTesting()`, Infinity);
 
