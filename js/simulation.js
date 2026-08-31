@@ -934,9 +934,9 @@ const simulation = {
             if (simulation.isConstructionMode) document.getElementById("construct").style.display = 'none'
         }
         simulation.isCheating = false
-        simulation.firstRun = false;
-        build.hasExperimentalMode = false
-        build.isExperimentSelection = false;
+        simulation.testing = true;
+        simulation.isConstructionMode = true; // Forces the dev construct panel open
+        build.hasExperimentalMode = true;     // Unlocks experimental developer features
         build.isExperimentRun = false;
         canvas.style.filter = "brightness(1)"
 
