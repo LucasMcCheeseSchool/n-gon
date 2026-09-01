@@ -2180,6 +2180,19 @@ const sound = {
 
 document.getElementById("choose-grid").classList.add('choose-grid-no-images');
 
+// Force unlock testing mode automatically at launch
+        if (typeof lore !== 'undefined' && lore.unlockTesting) {
+        lore.unlockTesting();
+    } else {
+        if (document.readyState === 'complete') {
+            if (typeof lore !== 'undefined' && lore.unlockTesting) lore.unlockTesting();
+        } else {
+            window.addEventListener('load', () => {
+                if (typeof lore !== 'undefined' && lore.unlockTesting) lore.unlockTesting();
+            });
+        }
+    }
+
 //**********************************************************************
 // main loop 
 //**********************************************************************
