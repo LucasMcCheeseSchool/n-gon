@@ -929,9 +929,7 @@ const simulation = {
         m.energy = 1
         //exit testing
         if (simulation.testing) {
-            simulation.testing = false;
             simulation.loop = simulation.normalLoop
-            if (simulation.isConstructionMode) document.getElementById("construct").style.display = 'none'
         }
         simulation.isCheating = false
         simulation.testing = true;
