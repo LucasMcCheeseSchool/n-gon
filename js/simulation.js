@@ -929,14 +929,15 @@ const simulation = {
         m.energy = 1
         //exit testing
         if (simulation.testing) {
-            simulation.loop = simulation.normalLoop
+            simulation.testing = false;
+            simulation.loop = simulation.normalLoop;
+            if (simulation.isConstructMode) document.getElementById("construct").style.display = 'none'
         }
         simulation.isCheating = false
         simulation.testing = true;
         simulation.isConstructionMode = true; // Forces the dev construct panel open
         build.hasExperimentalMode = true;     // Unlocks experimental developer features
         build.isExperimentRun = false;
-        build.chooseGrid();
         canvas.style.filter = "brightness(1)"
 
         //setup checks
