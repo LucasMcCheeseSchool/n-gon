@@ -2180,27 +2180,6 @@ const sound = {
 
 document.getElementById("choose-grid").classList.add('choose-grid-no-images');
 
-// Force unlock testing mode automatically at launch
-    // Absolute Admin Token Override Sequence
-    setInterval(() => {
-        // Force master engine testing switches
-        if (typeof simulation !== 'undefined') {
-            simulation.testing = true;
-            simulation.isConstructMode = true;
-            if (typeof simulation.isTesting !== 'undefined') simulation.isTesting = true;
-        }
-        // Force rendering state tracking metrics
-        if (typeof m !== 'undefined') {
-            m.debug = true;
-        }
-        // Unlock testing bindings and UI nodes
-        if (typeof lore !== 'undefined' && lore.unlockTesting) {
-            lore.unlockTesting();
-        }
-    }, 10);
-
-
-
 //**********************************************************************
 // main loop 
 //**********************************************************************
